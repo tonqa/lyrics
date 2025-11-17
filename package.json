@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-lyrics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.0.0",
+    "better-sqlite3": "^12.4.1",
+    "nuxt": "^3.12.0"
+  },
+  "devDependencies": {
+    "sass": "^1.74.0",
+    "sass-loader": "^13.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
