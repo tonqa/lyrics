@@ -5,7 +5,7 @@
         <div class="brand">
           <div class="logo">A</div>
           <div>
-            <div class="site-title">{{ song.title }} ({{ song.artist }})</div>
+            <div class="site-title">{{ song.title }} – {{ song.artist }}</div>
           </div>
         </div>
       </div>
