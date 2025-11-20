@@ -13,32 +13,56 @@
 
     <main class="main-content">
       <div class="container">
-
-        <ul class="card-grid">
-          <li v-for="song in songs" :key="song.path" class="song-card">
-            <div class="song-title"><NuxtLink :to="song.path">{{ song.title }}</NuxtLink></div>
-          </li>
-        </ul>
+        <div class="card">
+          <div class="form">
+            <input
+              id="song-code"
+              v-model="codeInput"
+              @keyup.enter="submit"
+              placeholder="Code eingeben"
+              class="code-input"
+              autofocus
+            />
+            <button @click="submit" class="btn-show">Anzeigen</button>
+          </div>
+          <p v-if="message" class="message">{{ message }}</p>
+        </div>
       </div>
     </main>
   </div>
 </template>
 
 <script setup>
-const songs = ref([])
+import { ref, onMounted } from 'vue'
+
+const codeInput = ref('')
+const message = ref('')
+const songsList = ref([])
+const router = useRouter()
+
 onMounted(async () => {
-  await nextTick();
-  const { data: config } = await useFetch('/config.json');
-  const activatedSongs = config.value.activatedSongs;
-  console.log(activatedSongs)
   const { data: result } = await useAsyncData(() => {
-    if (activatedSongs > 0) {
-      return queryCollection('songs').select('title', 'artist', 'path').limit(activatedSongs).all();
-    } else if (activatedSongs == 0) {
-      return []
-    }
-    return queryCollection('songs').select('title', 'artist', 'path').all();
+    return queryCollection('songs').select('path', 'code', 'title').all();
   })
-  songs.value = result.value;
+  songsList.value = result.value || []
 })
+
+function _extractCode(song) {
+  return song.code ?? (song._raw && song._raw.value && song._raw.value.code) ?? (song.data && song.data.code)
+}
+
+function submit() {
+  message.value = ''
+  const code = (codeInput.value || '').trim()
+  if (!code) {
+    message.value = 'Bitte gib einen Code ein.'
+    return
+  }
+  const song = songsList.value.find(s => _extractCode(s).toLowerCase() === code.toLowerCase())
+  if (song && song.path) {
+    router.push(song.path)
+  } else {
+    message.value = 'Ungültiger Code.'
+  }
+}
 </script>

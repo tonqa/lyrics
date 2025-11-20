@@ -9,7 +9,8 @@ export default defineContentConfig({
       source: 'songs/*.md',
       schema: z.object({
         title: z.string(),
-        artist: z.string()
+        artist: z.string(),
+        code: z.string(),
       }),
     })
   },

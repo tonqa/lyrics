@@ -14,9 +14,9 @@
     <main class="main-content">
       <div class="container">
         <article class="song-article">
-          <NuxtLink to="/" class="btn secondary">← Zurück</NuxtLink>
+          <NuxtLink to="/" class="btn-back secondary">← Zurück</NuxtLink>
           <ContentRenderer :value="song" class="prose" />
-          <NuxtLink to="/" class="btn secondary">← Zurück</NuxtLink>
+          <NuxtLink to="/" class="btn-back secondary">← Zurück</NuxtLink>
         </article>
       </div>
     </main>
