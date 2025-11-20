@@ -1,11 +1,26 @@
 <template>
-  <div>
-    <h1>Übersicht aller Lieder</h1>
-    <ul>
-      <li v-for="song in songs" :key="song.path">
-        <NuxtLink :to="song.path">{{ song.artist }} - {{ song.title }}</NuxtLink>
-      </li>
-    </ul>
+  <div class="site">
+    <header class="site-header">
+      <div class="container flex space-between">
+        <div class="brand">
+          <div class="logo">A</div>
+          <div>
+            <div class="site-title">Alex' Geburtstag</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+
+        <ul class="card-grid">
+          <li v-for="song in songs" :key="song.path" class="song-card">
+            <div class="song-title"><NuxtLink :to="song.path">{{ song.title }}</NuxtLink></div>
+          </li>
+        </ul>
+      </div>
+    </main>
   </div>
 </template>
 

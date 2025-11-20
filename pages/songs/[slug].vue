@@ -1,11 +1,26 @@
 <template>
-  <article>
-    <header>
-      <h1>{{ song.title }} ({{ song.artist }})</h1>
+  <div class="site">
+    <header class="site-header">
+      <div class="container flex">
+        <div class="brand">
+          <div class="logo">A</div>
+          <div>
+            <div class="site-title">{{ song.title }} ({{ song.artist }})</div>
+          </div>
+        </div>
+      </div>
     </header>
-    <ContentRenderer :value="song" prose />
-    <NuxtLink to="/">Zurück</NuxtLink>
-  </article>
+
+    <main class="main-content">
+      <div class="container">
+        <article class="song-article">
+          <NuxtLink to="/" class="btn secondary">← Zurück</NuxtLink>
+          <ContentRenderer :value="song" class="prose" />
+          <NuxtLink to="/" class="btn secondary">← Zurück</NuxtLink>
+        </article>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script setup>
