@@ -64,6 +64,6 @@ Da-da, da-da (Da-da, da-da)
 Da-da-da, lie, da-da-lie, da-da-lie, da-da-lie, da-da
 
 But I would walk five hundred miles  
-And I would walk five hundred more 
+And I would walk five hundred more  
 Just to be the man who walked a thousand miles  
 To fall down at your door
