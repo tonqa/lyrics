@@ -27,4 +27,4 @@ Dass es einmal so weit kommt, wegen 99 Luftballons
 99 Jahre Krieg ließen keinen Platz für Sieger  
 Kriegsminister gibt's nicht mehr und auch keine Düsenflieger  
 Heute zieh ich meine Runden, seh die Welt in Trümmern liegen  
-Hab 'n Luftballon gefunden, denk an dich und lass ihn fliegen
+Hab 'n Luftballon gefunden, denk an euch und lass ihn fliegen
