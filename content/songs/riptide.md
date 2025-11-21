@@ -16,7 +16,7 @@ And they come unstuck
 Lady, running down to the riptide  
 Taken away to the dark side  
 I wanna be your left hand man  
-| love you when you're singing that song and  
+I love you when you're singing that song and  
 I got a lump in my throat 'cause  
 You're gonna sing the words wrong
 
