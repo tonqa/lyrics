@@ -127,3 +127,8 @@ pre{background:#0b1220;color:#d1e9ff;padding:12px;border-radius:8px;overflow:aut
 }
 .btn-show:hover { background: #1e40af; }
 .message { margin-top: 0.5rem; color: #dc2626; font-weight: 500; }
+
+div.prose p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
